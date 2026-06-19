@@ -3,7 +3,7 @@ pipeline {
 
     environment {
         // Use your DockerHub username
-        IMAGE_NAME = "ezzine-mouhamed/student-management"
+        IMAGE_NAME = "devilitself/student-management"
         IMAGE_TAG = "1.0.${BUILD_NUMBER}"
         SONAR_PROJECT_KEY = "student-management"
         KUBE_NAMESPACE = "devops"
