@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: spring-app
+  name: student-management
+  namespace: devops
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: spring-app
+      app: student-management
   template:
     metadata:
       labels:
-        app: spring-app
+        app: student-management
     spec:
       containers:
-        - name: spring-app
-          image: spring-app:1.0
-          imagePullPolicy: IfNotPresent
+        - name: student-management
+          image: ezzine-mouhamed/student-management:latest
           ports:
             - containerPort: 8080
           env:
